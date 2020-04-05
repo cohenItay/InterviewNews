@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/fragmentArticleList"
-        android:name="com.itaycohen.interviewnews.ui_layer.articles.FragmentArticleList"
+        android:name="com.itaycohen.interviewnews.ui_layer.articles.ArticleListFragment"
         android:label="FragmentArticleList"
         tools:layout="@layout/fragment_articles_list"/>
 </navigation>
