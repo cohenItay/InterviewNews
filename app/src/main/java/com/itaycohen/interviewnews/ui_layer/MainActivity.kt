@@ -1,7 +1,8 @@
-package com.itaycohen.interviewnews
+package com.itaycohen.interviewnews.ui_layer
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.itaycohen.interviewnews.R
 
 class MainActivity : AppCompatActivity() {
 

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigationGraph"
+    app:startDestination="@id/fragmentArticleList">
+
+    <fragment
+        android:id="@+id/fragmentArticleList"
+        android:name="com.itaycohen.interviewnews.ui_layer.articles.FragmentArticleList"
+        android:label="FragmentArticleList"
+        tools:layout="@layout/fragment_articles_list"/>
+</navigation>
