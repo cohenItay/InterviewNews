@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainNavigationGraph"
+    app:startDestination="@id/articleListFragment">
+
+    <fragment
+        android:id="@+id/articleListFragment"
+        android:name="com.itaycohen.interviewnews.ui_layer.articles.ArticleListFragment"
+        android:label="ArticleListFragment"
+        tools:layout="@layout/fragment_articles_list"/>
+    <fragment
+        android:id="@+id/articleDetailedFragment"
+        android:name="com.itaycohen.interviewnews.ui_layer.articles.ArticleDetailedFragment"
+        android:label="ArticleDetailedFragment"
+        tools:layout="@layout/fragment_article_detailed"/>
+</navigation>

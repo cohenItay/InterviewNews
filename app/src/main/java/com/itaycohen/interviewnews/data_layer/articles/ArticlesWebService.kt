@@ -1,5 +1,7 @@
 package com.itaycohen.interviewnews.data_layer.articles
 
+import com.itaycohen.interviewnews.data_layer.articles.models.TopHeadlinesModel
+import retrofit2.Response
 import retrofit2.http.GET
 import retrofit2.http.Path
 
@@ -10,5 +12,5 @@ interface ArticlesWebService {
     }
 
     @GET(PATH_TOP_HEADLINES)
-    fun getHeadlines(@Path(value = "country") country: String)
+    suspend fun getHeadlines(@Path(value = "country") country: String) : Response<TopHeadlinesModel>
 }

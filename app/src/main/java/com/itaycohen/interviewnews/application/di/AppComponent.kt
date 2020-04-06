@@ -1,7 +1,7 @@
-package com.itaycohen.interviewnews.dependency_injection
+package com.itaycohen.interviewnews.application.di
 
 import android.content.Context
-import com.itaycohen.interviewnews.ui_layer.articles.ArticlesSubComponent
+import com.itaycohen.interviewnews.ui_layer.articles.di.ArticlesComponent
 import dagger.BindsInstance
 import dagger.Component
 
@@ -9,7 +9,7 @@ import dagger.Component
 @Component(modules = [AppSubComponentsModule::class])
 interface AppComponent {
 
-    fun articlesSubComponentFactory() : ArticlesSubComponent.Factory
+    fun getArticlesComponent() : ArticlesComponent.Factory
 
     @Component.Factory
     interface Factory {

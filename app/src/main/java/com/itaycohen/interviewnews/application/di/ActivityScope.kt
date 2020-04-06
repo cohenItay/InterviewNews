@@ -1,9 +1,9 @@
-package com.itaycohen.interviewnews.dependency_injection
+package com.itaycohen.interviewnews.application.di
 
 import javax.inject.Scope
 
 /**
- * Define the required Component to be attached to the activity lifecycle.
+ * Define the required Component to be attached to a activity lifecycle.
  * Meaning this component will be construct and deconstruct in coherence with the activity life cycle.
  */
 @Scope

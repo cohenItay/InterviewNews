@@ -1,8 +1,8 @@
-package com.itaycohen.interviewnews
+package com.itaycohen.interviewnews.application
 
 import android.app.Application
-import com.itaycohen.interviewnews.dependency_injection.AppComponent
-import com.itaycohen.interviewnews.dependency_injection.DaggerAppComponent
+import com.itaycohen.interviewnews.application.di.AppComponent
+import com.itaycohen.interviewnews.application.di.DaggerAppComponent
 
 class NewsApp : Application() {
 

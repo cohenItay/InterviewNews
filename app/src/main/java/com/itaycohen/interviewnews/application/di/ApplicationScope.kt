@@ -1,6 +1,6 @@
-package com.itaycohen.interviewnews.dependency_injection
+package com.itaycohen.interviewnews.application.di
 
-import com.itaycohen.interviewnews.NewsApp
+import com.itaycohen.interviewnews.application.NewsApp
 import javax.inject.Scope
 
 /**
@@ -9,5 +9,4 @@ import javax.inject.Scope
  */
 @Scope
 @Retention(value = AnnotationRetention.RUNTIME)
-annotation class ApplicationScope {
-}
+annotation class ApplicationScope
