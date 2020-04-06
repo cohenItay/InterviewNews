@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/articleListFragment"
         android:name="com.itaycohen.interviewnews.ui_layer.articles.screen_list.ArticleListFragment"
-        android:label="ArticleListFragment"
+        android:label="Articles List"
         tools:layout="@layout/fragment_articles_list">
 
         <action
@@ -23,7 +23,11 @@
     <fragment
         android:id="@+id/articleDetailedFragment"
         android:name="com.itaycohen.interviewnews.ui_layer.articles.screen_detailed.ArticleDetailedFragment"
-        android:label="ArticleDetailedFragment"
+        android:label="Article Detailed"
         tools:layout="@layout/fragment_article_detailed">
+
+        <argument
+            android:name="itemPosition"
+            app:argType="integer"/>
     </fragment>
 </navigation>
