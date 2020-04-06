@@ -27,7 +27,7 @@ class ArticlesRepository @Inject constructor(
      * @param forCountry country of required headlines
      * @throws [Throwable] [NetworkError] or [TopHeadlinesError]
      */
-    suspend fun updateTopHeadlines(forCountry: String = ISRAERL) {
+    suspend fun updateTopHeadlines(forCountry: String = USA) {
         // Retrofit 2.6.+ support main-safe function
         // also, it has its own custom Dispatcher, meaning Dispatcher.IO is not being used.
         // so, his api function implementation are main-safe,
@@ -50,6 +50,7 @@ class ArticlesRepository @Inject constructor(
 
     companion object {
         const val ISRAERL = "il"
+        const val USA = "us"
     }
 
 }
