@@ -4,16 +4,15 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentFactory
 import com.itaycohen.interviewnews.R
 import com.itaycohen.interviewnews.ui_layer.articles.screen_detailed.ArticleDetailedFragment
-import com.itaycohen.interviewnews.ui_layer.articles.screen_detailed.ArticleDetailedViewModel
 import com.itaycohen.interviewnews.ui_layer.articles.screen_list.ArticleListFragment
-import com.itaycohen.interviewnews.ui_layer.articles.screen_list.ArticleListViewModel
+import com.itaycohen.interviewnews.ui_layer.articles.screen_list.ArticlesListViewModel
 import javax.inject.Inject
 
 /**
  * A custom fragment factory which implement how to instantiate the article related fragments.
  */
 class ArticlesFragmentFactory @Inject constructor(
-    private val sharedViewModel: ArticlesViewModel,
+    private val sharedViewModel: ArticlesListViewModel,
     private val viewModelFactory: ArticlesViewModelFactory
 ) : FragmentFactory(){
 

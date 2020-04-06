@@ -25,9 +25,5 @@
         android:name="com.itaycohen.interviewnews.ui_layer.articles.screen_detailed.ArticleDetailedFragment"
         android:label="ArticleDetailedFragment"
         tools:layout="@layout/fragment_article_detailed">
-
-        <argument
-            android:name="screenTitle"
-            app:argType="string"/>
     </fragment>
 </navigation>

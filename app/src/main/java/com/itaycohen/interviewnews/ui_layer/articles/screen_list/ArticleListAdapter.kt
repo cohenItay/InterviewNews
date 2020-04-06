@@ -49,7 +49,7 @@ class ArticleListAdapter(
         init {
             itemView.setOnClickListener {
                 val title = itemView.titleTextView.text.toString()
-                itemView.findNavController().navigate(ArticleListFragmentDirections.nextDestinationAction(title))
+                itemView.findNavController().navigate(ArticleListFragmentDirections.nextDestinationAction())
             }
         }
     }

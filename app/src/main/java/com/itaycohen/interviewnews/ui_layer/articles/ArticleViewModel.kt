@@ -1,4 +1,4 @@
-package com.itaycohen.interviewnews.ui_layer.articles.screen_list
+package com.itaycohen.interviewnews.ui_layer.articles
 
 import androidx.lifecycle.*
 import com.itaycohen.interviewnews.data_layer.articles.ArticlesRepository
@@ -6,7 +6,11 @@ import com.itaycohen.interviewnews.data_layer.network.QueryState
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-class ArticleListViewModel @Inject constructor(
+/**
+ * This ViewModel is intended to share data between fragment.
+ * should be instantiated using [ArticlesActivity] as [ViewModelStoreOwner]
+ */
+class ArticleViewModel @Inject constructor(
     private val repo: ArticlesRepository
 ) : ViewModel() {
 
@@ -29,6 +33,8 @@ class ArticleListViewModel @Inject constructor(
                 repo.updateTopHeadlines()
             } catch (error: Throwable) {
                 mutableQueryLiveData.value = QueryState.error(error)
+            } finally {
+                mutableQueryLiveData.value = QueryState.LOADED
             }
         }
     }
