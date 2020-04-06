@@ -7,7 +7,7 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
 import androidx.navigation.fragment.navArgs
 import com.itaycohen.interviewnews.data_layer.articles.models.TopHeadlinesModel
-import com.itaycohen.interviewnews.ui_layer.articles.ArticleViewModel
+import com.itaycohen.interviewnews.ui_layer.articles.ArticlesViewModel
 import com.itaycohen.interviewnews.ui_layer.articles.ArticlesViewModelFactory
 import kotlinx.android.synthetic.main.fragment_article_detailed.*
 
@@ -16,7 +16,7 @@ class ArticleDetailedFragment (
     private val viewModelFactory: ArticlesViewModelFactory
 ) : Fragment(layoutRes) {
 
-    private val sharedViewModel: ArticleViewModel by viewModels({activity!!}, { viewModelFactory })
+    private val sharedViewModel: ArticlesViewModel by viewModels(::requireActivity) { viewModelFactory }
     private val safeArgs: ArticleDetailedFragmentArgs by navArgs()
 
     override fun onCreate(savedInstanceState: Bundle?) {

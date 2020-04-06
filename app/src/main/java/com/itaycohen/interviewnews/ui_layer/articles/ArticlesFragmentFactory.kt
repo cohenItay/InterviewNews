@@ -12,7 +12,6 @@ import javax.inject.Inject
  * A custom fragment factory which implement how to instantiate the article related fragments.
  */
 class ArticlesFragmentFactory @Inject constructor(
-    private val sharedViewModel: ArticlesListViewModel,
     private val viewModelFactory: ArticlesViewModelFactory
 ) : FragmentFactory(){
 

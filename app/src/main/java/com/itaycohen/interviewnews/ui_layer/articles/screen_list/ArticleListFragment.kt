@@ -10,7 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.android.material.snackbar.Snackbar
 import com.itaycohen.interviewnews.data_layer.articles.models.TopHeadlinesModel
 import com.itaycohen.interviewnews.data_layer.network.QueryState
-import com.itaycohen.interviewnews.ui_layer.articles.ArticleViewModel
+import com.itaycohen.interviewnews.ui_layer.articles.ArticlesViewModel
 import com.itaycohen.interviewnews.ui_layer.articles.ArticlesViewModelFactory
 import kotlinx.android.synthetic.main.fragment_articles_list.*
 
@@ -19,7 +19,7 @@ class ArticleListFragment (
     private val viewModelFactory: ArticlesViewModelFactory
 ) : Fragment(layoutRes) {
 
-    private val sharedViewModel: ArticleViewModel by viewModels({activity!!}, { viewModelFactory })
+    private val sharedViewModel: ArticlesViewModel by viewModels(::requireActivity) { viewModelFactory }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

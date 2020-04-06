@@ -10,7 +10,7 @@ import javax.inject.Inject
  * This ViewModel is intended to share data between fragment.
  * should be instantiated using [ArticlesActivity] as [ViewModelStoreOwner]
  */
-class ArticleViewModel @Inject constructor(
+class ArticlesViewModel @Inject constructor(
     private val repo: ArticlesRepository
 ) : ViewModel() {
 

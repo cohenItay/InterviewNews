@@ -14,7 +14,7 @@ import javax.inject.Provider
  */
 class ArticlesViewModelFactory @Inject constructor(
     private val sharedProvider: Provider<ArticlesListViewModel>,
-    private val listProvider: Provider<ArticleViewModel>,
+    private val listProvider: Provider<ArticlesViewModel>,
     private val detailedProvider: Provider<ArticleDetailedViewModel>
 ) : ViewModelProvider.Factory {
 
@@ -24,7 +24,7 @@ class ArticlesViewModelFactory @Inject constructor(
             ArticlesListViewModel::class.java -> {
                 sharedProvider.get()
             }
-            ArticleViewModel::class.java -> {
+            ArticlesViewModel::class.java -> {
                 listProvider.get()
             }
             ArticleDetailedViewModel::class.java -> {
