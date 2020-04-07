@@ -43,17 +43,13 @@ class NavigateToDetailedFragmentTest {
             .getFragmentFactory()
 
         val fragScenario = launchFragmentInContainer<ArticleListFragment>(factory = fragmentFactory)
-        fragScenario.moveToState(Lifecycle.State.CREATED)
         fragScenario.onFragment { listFrag ->
             Navigation.setViewNavController(listFrag.requireView(), navController)
-            val sharedViewModel = ViewModelProvider(listFrag.requireActivity()).get(ArticlesViewModel::class.java)
-            IdlingRegistry.getInstance().register(sharedViewModel.idleResource)
         }
-        fragScenario.moveToState(Lifecycle.State.RESUMED)
     }
 
     @Test
     fun startTest() {
-        assertEquals(true, true)
+
     }
 }
