@@ -14,11 +14,14 @@ import org.mockito.Mockito.`when`
 import org.mockito.Mockito.mock
 import retrofit2.Response
 
-
+/**
+ * This test check the [ArticlesRepository] api.
+ * its uses Kotlin coroutines test tools for actually open connection sockets and retrieve a mocked response.
+ */
 class RepositoryTest {
 
     @get:Rule
-    val rule = InstantTaskExecutorRule() // for livedata looper
+    val rule = InstantTaskExecutorRule() // for Livedata looper
 
     @Test
     fun whenUpdateHeadlineSuccess_LiveDataIsUpdated() {
