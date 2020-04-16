@@ -31,7 +31,7 @@ class ArticlesRepository @Inject constructor(
         // Retrofit 2.6.+ support main-safe function
         // also, it has its own custom Dispatcher, meaning Dispatcher.IO is not being used.
         // so, his api function implementation are main-safe,
-        // therefor no need wrap the try catch with witchContext(Dispatcher.IO){}
+        // therefor no need wrap the try catch with withContext(Dispatcher.IO){}
 
         val response = try {
             articlesWebService.getHeadlines(forCountry)

@@ -2,6 +2,7 @@ package com.itaycohen.interviewnews.ui_layer.articles
 
 import androidx.lifecycle.*
 import com.itaycohen.interviewnews.data_layer.articles.ArticlesRepository
+import com.itaycohen.interviewnews.data_layer.articles.models.TopHeadlinesModel
 import com.itaycohen.interviewnews.data_layer.network.QueryState
 import kotlinx.coroutines.launch
 import javax.inject.Inject
@@ -19,7 +20,7 @@ class ArticlesViewModel @Inject constructor(
     val topHeadlinesLiveData = Transformations.map(repo.topHeadlinesLiveData) {it}
 
     /**
-     * True if query is running
+     * Live data object holding the [TopHeadlinesModel] query status
      */
     val queryStateLiveData: LiveData<QueryState> = MutableLiveData(QueryState.IDLE)
 
